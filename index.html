@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/jquery-confirm.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/jquery-confirm.js"></script>
+        <script src="js/javascript.js"></script>
+        <title>Jamie's Pizza Place &trade; Order Form</title>
+    </head>
+    <body>
+        <div class="heading-ctn"><h1><img src="img/pizza-slice-solid.svg" id="pizza_slice" alt="pizza slice"> Welcome to Jamie's Pizza Place Order Form!</h1>
+        </div>
+        <div class="pictures-ctn">
+            <div class="pic"><img src="img/largePizza.jpg" alt="largePizza"><p>Large: &euro;5.00</p></div>
+            <div class="pic"><img src="img/extraLarge.jpg" alt="extralargePizza"><p>Extra-Large: &euro;7.00</p></div>
+            <div class="pic"><img src="img/supersize.png" alt="supersize"><p>SUPERSIZE: &euro;17.00</p></div>
+        </div>
+        <div class="form-ctn">
+            <form name="myForm" onsubmit=" return !!(validateForm());" method="post">
+                <table>
+                    <tr>
+                        <th>Personal Details</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <!-- targetting all these section-content classes in the stylesheet -->
+                            <div class="section-contents">
+                                <div>
+                                    <p>Username</p><input type="text" name="fname" size="30">
+                                </div>
+                                <div>
+                                    <p>Password</p><input type="password" name="password" size="30">
+                                </div>
+                            </div>    
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Order Details</th>
+                    </tr>     
+                    <tr>
+                        <td>
+                            <div class="section-contents">
+                                <div>
+                                    <p>Size</p>
+                                    <select id="dropdown" name="type" size="1" >
+                                        <option class="s" value="large">Large</option>
+                                        <option class="s" value="extra-large">Extra-Large</option>
+                                        <option class="s" value="supersize">SUPERSIZE</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <p>Number of Pizzas</p><input type="text"  id="no_of_pizzas" size="30">
+                                </div>
+                                <div>
+                                    <button type="button" id="var1" onclick="isNumeric()">Add To Total</button>
+                                </div>
+                                <div>
+                                    <button type="button" onclick="resetTotal()">Clear Total</button>
+                                </div>
+                            </div>    
+                        </td>
+                    </tr>   
+                        <tr>
+                        <th>Discount Code</th>
+                    </tr>                     
+                    <tr>
+                        <td>
+                            <div class="section-contents">
+                                <div>
+                                    <button type="button" onclick="discountCode()">Add Discount Code</button>
+                                </div>
+                                <div>
+                                    <input type="text" id="discount_code" size="30">
+                                </div>
+                            </div>    
+                        </td>
+                    </tr>               
+                    <tr>
+                        <th> 
+                            <div class = "section-contents">
+                                <span>Total: &euro;  </span><span id="demo5"></span><span id="demo4"></span>
+                            </div>
+                            <div class = "section-contents">
+                                <input id="submit-btn" type="submit" value="Submit Order">
+                            </div>
+                        </th>
+                    </tr>
+                </table>                
+            </form>
+        </div>
+    </body>
+</html>

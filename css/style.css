@@ -1,0 +1,133 @@
+/* get rid of the default margin and padding  */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #efebce;
+  font-family: Arial, Helvetica, sans-serif;
+  /* nice google font  */
+  font-family: "Fredericka the Great", cursive;
+}
+
+/************headings section********************/
+
+/* this is making the icon smaller */
+#pizza_slice {
+  font-size: 10px;
+}
+
+.heading-ctn {
+  width: 100%;
+}
+
+.heading-ctn img {
+  width: 10%;
+  height: 50%;
+}
+
+h1 {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d8a48f;
+}
+
+/************pics section********************/
+
+.pictures-ctn {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pic {
+  width: 33.333333%;
+  text-align: center;
+}
+
+.pic img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/************form section********************/
+
+.form-ctn {
+  height: 50vh;
+  padding-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* select tag targetting */
+.section-contents .section-div select {
+  width: 200px;
+  text-align-last: center;
+  margin-bottom: 5px;
+}
+
+/* make the table responsive */
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td {
+  border: 1px solid gray;
+  padding: 3px;
+  vertical-align: top;
+}
+
+th {
+  text-align: left;
+  padding-top: 2%;
+}
+
+/* make the items within each section flex items so they wrap to next line if not enough space */
+.section-contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 2.5%;
+}
+
+.section-contents > div {
+  padding: 0 2.5%;
+}
+
+.section-contents #dropdown {
+  width: 200px;
+}
+
+.section-contents > div p,
+input {
+  margin-bottom: 2px;
+}
+
+/* target all the buttons with the same style */
+.section-contents > div button,
+#submit-btn {
+  cursor: pointer;
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  border-radius: 8px;
+  border: 1px solid grey;
+  background-color: rgb(192, 190, 190);
+  box-shadow: 1px 1px 1px #888888;
+}
+
+#discount_code {
+  margin-top: 8px;
+  margin-bottom: 2px;
+}
+
+#submit-btn {
+  padding: 1%;
+}
